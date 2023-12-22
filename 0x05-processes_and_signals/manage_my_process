@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# manage_my_process Bash script that indefinitely writes I am alive!
+while [[ 1 -eq 1 ]];
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
