@@ -1,6 +1,7 @@
 # Secured and monitored web infrastructure
 ![Whiteboard of a secured and monitored web infrastructure](2-secured_and_monitored_web_infrastructure.png)
 [view whiteboard](https://imgur.com/a/tdi7U0T)
+
 This is a project that describes a secured and monitored web framework hosting a website accessible through 'www.foobar.com'. This 3-server web infrastructure is secured, monitored and serves encrypted traffic. The following are the requirements of this secured and monitored web infrastructure;
 - 3 firewalls
 - 1 SSL certificate to serve www.foobar.com over HTTPS
