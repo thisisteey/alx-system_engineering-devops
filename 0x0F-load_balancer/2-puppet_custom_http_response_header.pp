@@ -1,14 +1,14 @@
 # Creating a custom HTTP header response using puppet
-exec { 'apt-get-update':
+exec { 'update_apt_repository':
   command => '/usr/bin/apt-get update',
 }
 
 package { 'nginx':
   ensure  => installed,
-  require => Exec['apt-get-update'],
+  require => Exec['update_apt_repository'],
 }
 
-file_line { 'a':
+file_line { 'configure_rewrite_rule':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
@@ -16,7 +16,7 @@ file_line { 'a':
   require => Package['nginx'],
 }
 
-file_line { 'b':
+file_line { 'configure_custom_header':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
