@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fixes a nginx listening port to be on 80 and reload the master process
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+pgrep nginx > /dev/null || nginx -g 'daemon on; master_process on;'
+echo '' > /run/nginx.pid
