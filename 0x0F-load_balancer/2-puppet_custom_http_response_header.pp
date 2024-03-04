@@ -8,7 +8,7 @@ package { 'nginx':
   require => Exec['update_apt_repository'],
 }
 
-file_line { 'configure_rewrite_rule':
+file_line { 'a':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
@@ -16,7 +16,7 @@ file_line { 'configure_rewrite_rule':
   require => Package['nginx'],
 }
 
-file_line { 'configure_custom_header':
+file_line { 'b':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
