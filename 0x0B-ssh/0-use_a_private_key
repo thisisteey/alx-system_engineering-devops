@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Script that connects to a server using SSH, a private key and ubuntu
-ssh -i ~/.ssh/school -o "PasswordAuthentication no" ubuntu@34.229.161.134
+ssh -i ~/.ssh/school -o "PasswordAuthentication no" ubuntu@54.237.100.185
