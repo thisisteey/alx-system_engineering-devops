@@ -15,8 +15,8 @@ LB_CONFIGURATION=\
 #--$WEBSITE_DOMAIN-params-begin--
 backend $WEBSITE_DOMAIN-backend
 	balance roundrobin
-	server 503060-web-01 54.237.100.185:80 check
-	server 503060-web-02 18.206.208.19:80 check
+	server 503060-web-01 100.25.199.90:80 check
+	server 503060-web-02 52.3.242.186:80 check
 
 frontend $WEBSITE_DOMAIN-frontend
 	bind *:80
