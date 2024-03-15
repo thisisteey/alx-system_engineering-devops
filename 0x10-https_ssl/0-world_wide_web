@@ -1,24 +1,25 @@
 #!/usr/bin/env bash
 # Adds subdomain to domains and display information about the subdomains
-fetch_subdomains() {
+Domain_Info() {
 	domain="$1"
 	subdomains=()
-	readarray -t subdomains <(echo "$2" | tr ' ' '\n')
+	readarray -t subdomains < <(echo "$2" | tr ' ' '\n')
 	for ((x = 0; x < "${#subdomains[@]}"; x++)) do
-		subdomain="${subdomains[i]}"
+		subdomain="${subdomains[x]}"
 		awk_script='{print "The subdomain", "'
-		awk_script="$awk_script$subdomain is a "
+		awk_script="$awk_script$subdomain is a"
 		awk_script="$awk_script\", \$7, \"record and points to\", \$8}"
-		dig "$subdomain.$domain"\
+		dig "$subdomain.$domain" \
 			| grep -A1 'ANSWER SECTION:' \
 			| tr '\n' ' ' \
 			| awk "$awk_script"
 	done
 }
+
 if [ "${#BASH_ARGV[@]}" -ge '2' ]; then
-	fetch_subdomains "$1" "$2"
+	Domain_Info "$1" "$2"
 elif [ "${#BASH_ARGV[@]}" -ge '1' ]; then
-	fetch_subdomains "$1" "www lb-01 web-01 web-02"
+	Domain_Info "$1" "www lb-01 web-01 web-02"
 else
 	exit
 fi
