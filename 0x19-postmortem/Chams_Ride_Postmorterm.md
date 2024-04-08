@@ -33,4 +33,5 @@ To prevent similar incidents in the future, the following measures will be imple
 We at Chams Ride are dedicated to enhancing our systems and processes to minimize future disruptions. Your understanding and support are invaluable to us as we strive to provide a seamless experience. We extend our gratitude for your patience and apologize for any inconvenience caused.
 
 Best regards,
+
 The Chams Ride Team
