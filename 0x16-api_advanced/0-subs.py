@@ -18,7 +18,7 @@ def number_of_subscribers(subreddit):
             ])
     }
     res_data = get(
-            f"{REDDIT_URL}/r/{subreddit}/about/.json",
+            f"{REDDIT_URL}/r/{subreddit}/about.json",
             headers=reddit_headers,
             allow_redirects=False
     )
