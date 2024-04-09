@@ -17,11 +17,11 @@ def number_of_subscribers(subreddit):
                 "Safari/17.4.1"
             ])
     }
-    res = get(
+    res_data = get(
             f"{REDDIT_URL}/r/{subreddit}/about.json",
             headers=reddit_headers,
             allow_redirects=False
     )
-    if res.status_code == 200:
-        return res.json()["data"]["subscribers"]
+    if res_data.status_code == 200:
+        return res_data.json()["data"]["subscribers"]
     return 0
