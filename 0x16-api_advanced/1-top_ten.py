@@ -17,10 +17,8 @@ def top_ten(subreddit):
                 "Safari/17.4.1"
             ])
     }
-    srt = "top"
-    lmt = 10
     res_data = get(
-            f"{REDDIT_URL}/r/{subreddit}/.json?sort={srt}&limit={lmt}",
+            f"{REDDIT_URL}/r/{subreddit}/hot.json?limit=10",
             headers=reddit_headers,
             allow_redirects=False
     )
