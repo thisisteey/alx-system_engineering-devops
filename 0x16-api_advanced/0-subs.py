@@ -14,9 +14,8 @@ def number_of_subscribers(subreddit):
             "User-Agent": " ".join([
                 "AppleWebKit/537.36 (KHTML, like, Gecko)",
                 "Chrome/97.0.4692.71",
-                "Edg/97.0.1072.62",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-                "Safari/537.36"
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 12.7.4)",
+                "Safari/17.4.1"
             ])
     }
     res_data = get(
