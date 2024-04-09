@@ -12,9 +12,8 @@ def number_of_subscribers(subreddit):
     reddit_headers = {
             "Accept": "application/json",
             "User-Agent": " ".join([
-                "AppleWebKit/537.36 (KHTML, like, Gecko)",
-                "Chrome/97.0.4692.71",
                 "Mozilla/5.0 (Macintosh; Intel Mac OS X 12.7.4)",
+                "Firefox/124.0.2",
                 "Safari/17.4.1"
             ])
     }
