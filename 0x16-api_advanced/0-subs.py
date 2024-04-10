@@ -23,5 +23,11 @@ def number_of_subscribers(subreddit):
             allow_redirects=False
     )
     if res_data.status_code == 200:
-        return res_data.json()["data"]["subscribers"]
-    return 0
+        try:
+            return res_data.json()["data"]["subscribers"]
+        except KeyError:
+            return 0
+    elif res_data.status_code == 404:
+        return 0
+    else:
+        return 0
