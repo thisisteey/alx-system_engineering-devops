@@ -23,12 +23,7 @@ def top_ten(subreddit):
             allow_redirects=False
     )
     if res_data.status_code == 200:
-        try:
-            data = res_data.json()
-            if data and "data" in data and "children" in data["data"]:
-                for post_item in data["data"]["children"]:
-                    print(post_item["data"]["title"])
-        except Exception as e:
-            pass
+        for post_item in res_data.json()["data"]["children"][0:10]:
+            print(post_item["data"]["title"])
     else:
         print(None)
