@@ -11,12 +11,12 @@ On Friday, April 5 2024, there was an outage due to a service distruption that l
 
 ## Timeline (all times GMT+1)
 
-- 2:50 PM: Issue Detected - The issue was detected by automated monitoring systems, which flagged an unusually high number of failed authentication requests.
-- 3:00 PM: Incident Investigation Initiated - Upon detection, the incident was promptly escalated to the development team for investigation. Initial assumption pointed towards a potential database connectivity issue.
-- 3:15 PM: Misleading Investigation Paths - During the investigation, the team initially focused on database connectivity as the potential root cause. However, further analysis revealed that the issue originated from a misconfiguration in the authentication server.
-- 3:45 PM: Incident Escalated to Senior Developers - Due to the complexity of the issue, the incident was escalated to senior developers for additional troubleshooting and resolution.
-- 4:15 PM: Issue Resolved - After identifying the misconfiguration in the authentication server, corrective measures were implemented, and the server configuration was reverted to its previous state.
-- 4:30 PM: 100% of Traffic Restored - After the server configuration was reverted to its previous state, 100% of users regained access to all the functionalities of the website.
+- **2:50 PM: Issue Detected** - The issue was detected by automated monitoring systems, which flagged an unusually high number of failed authentication requests.
+- **3:00 PM: Incident Investigation Initiated** - Upon detection, the incident was promptly escalated to the development team for investigation. Initial assumption pointed towards a potential database connectivity issue.
+- **3:15 PM: Misleading Investigation Paths** - During the investigation, the team initially focused on database connectivity as the potential root cause. However, further analysis revealed that the issue originated from a misconfiguration in the authentication server.
+- **3:45 PM: Incident Escalated to Senior Developers** - Due to the complexity of the issue, the incident was escalated to senior developers for additional troubleshooting and resolution.
+- **4:15 PM: Issue Resolved** - After identifying the misconfiguration in the authentication server, corrective measures were implemented, and the server configuration was reverted to its previous state.
+- **4:30 PM: 100% of Traffic Restored** - After the server configuration was reverted to its previous state, 100% of users regained access to all the functionalities of the website.
 
 ## Root Cause and Resolution
 
