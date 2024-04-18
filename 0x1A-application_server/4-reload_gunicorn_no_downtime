@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+# Reloads Gunicorn gracefully updating without downtime
+gunicorn_pid=$(systemctl status gunicorn | grep -oE 'Main PID: [0-9]+' | cut -d ' ' -f3)
+
+if [ -z "$gunicorn_pid" ]; then
+        echo "Error: Unable to retrieve Gunicorn main PID"
+        exit 1
+fi
+kill -HUP "$gunicorn_pid"
+if [ $? -ne 0 ]; then
+        echo "Error: Failed to send HUP signal to Gunicorn process with PID $gunicorn_pid"
+        exit 1
+fi
+echo "Gunicorn reloaded gracefully"
