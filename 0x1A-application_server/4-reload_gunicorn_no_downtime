@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Reloads Gunicorn gracefully updating without downtime
 gunicorn_pid=$(systemctl status gunicorn | grep -oE 'Main PID: [0-9]+' | cut -d ' ' -f3)
 
