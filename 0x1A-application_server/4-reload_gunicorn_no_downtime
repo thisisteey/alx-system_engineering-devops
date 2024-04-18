@@ -6,8 +6,7 @@ if [ -z "$gunicorn_pid" ]; then
         echo "Error: Unable to retrieve Gunicorn main PID"
         exit 1
 fi
-kill -HUP "$gunicorn_pid"
-if [ $? -ne 0 ]; then
+if ! kill -HUP "$gunicorn_pid"; then
         echo "Error: Failed to send HUP signal to Gunicorn process with PID $gunicorn_pid"
         exit 1
 fi
